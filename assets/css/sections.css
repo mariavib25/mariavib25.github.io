@@ -14,23 +14,21 @@
 /* Contenedor de títulos */
 .hero-title {
   position: relative;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
 }
 
 /* Texto de fondo gigante */
 .bg-text {
   position: absolute;
-  top: 50%;              /* centrado vertical */
-  left: 50%;             /* centrado horizontal */
-  transform: translate(-50%, -50%);
-  font-size: 5vw;        /* se adapta al tamaño de pantalla */
+  top: 50%;
+  transform: translateY(-50%); /* solo centrado vertical */
+  font-size: 3vw;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.05);
   z-index: 1;
   text-transform: uppercase;
-  white-space: nowrap;
   pointer-events: none;
 }
 
