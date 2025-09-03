@@ -61,17 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     message.textContent = '¡Correo copiado!';
                     message.style.cssText = `
                         position: absolute;
-                        top: 120%; /* Debajo del botón */
+                        top: 120%; 
                         left: 50%;
                         transform: translateX(-50%);
-                        background-color: rgba(0, 0, 0, 0.8);
+                        background-color: rgba(0, 0, 0, 0.85);
                         color: white;
                         padding: 8px 12px;
-                        border-radius: 4px;
+                        border-radius: 6px;
                         font-size: 14px;
-                        white-space: nowrap;
+                        text-align: center;
+                        max-width: 200px;  
+                        width: max-content; 
+                        white-space: normal; 
                         z-index: 1000;
                     `;
+
                     copyEmailBtn.style.position = 'relative';
                     copyEmailBtn.appendChild(message);
                     
