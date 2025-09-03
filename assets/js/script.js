@@ -1,20 +1,15 @@
-// Selección enlaces del menú
+// Marcar enlaces del menú cuando te encuentras en las sección
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", () => {
   let current = "";
-  let minDistance = window.innerHeight;
-
-  sections.forEach((section, idx) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      if (idx === sections.length - 1) {
-        current = section.getAttribute("id");
-      } else if (rect.top >= -150 && rect.top < minDistance) {
-        minDistance = rect.top;
-        current = section.getAttribute("id");
-      }
+  
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.scrollY >= (sectionTop - sectionHeight/3)) {
+      current = section.getAttribute("id");
     }
   });
 
@@ -45,5 +40,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutSection = document.querySelector('#about');
     if (aboutSection) {
         observer.observe(aboutSection);
+    }
+});
+
+// Funcionalidad de copiar al portapapeles
+document.addEventListener('DOMContentLoaded', () => {
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = 'mvb.mvidigal@gmail.com';
+            navigator.clipboard.writeText(email)
+                .then(() => {
+                    // Cambiar temporalmente el icono y texto
+                    const icon = copyEmailBtn.querySelector('i');
+                    const originalIcon = icon.className;
+                    icon.className = 'bi bi-check-lg';
+                    // Crear y mostrar el mensaje de confirmación
+                    const message = document.createElement('div');
+                    message.textContent = '¡Correo copiado!';
+                    message.style.cssText = `
+                        position: absolute;
+                        right: -150px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(0, 0, 0, 0.8);
+                        color: white;
+                        padding: 8px 12px;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        white-space: nowrap;
+                    `;
+                    copyEmailBtn.style.position = 'relative';
+                    copyEmailBtn.appendChild(message);
+                    
+                    // Eliminar el mensaje después de 2 segundos
+                    setTimeout(() => {
+                        message.remove();
+                        icon.className = originalIcon;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Error al copiar el email:', err);
+                });
+        });
     }
 });
