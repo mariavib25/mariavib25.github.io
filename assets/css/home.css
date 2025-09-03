@@ -1,0 +1,75 @@
+/* =========================
+   HOME
+   ========================= */
+.home-section {
+  font-size: 1.8rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+/* Nombre destacado con degradado animado */
+.highlight {
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 6rem;
+  animation: gradientMove 4s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Imagen y círculos animados */
+.home-image img {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 4;
+}
+.home-image::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px dashed #ff00ff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 8s linear infinite;
+  z-index: 1;
+}
+.home-image::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 2px dashed #00ffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin-reverse 12s linear infinite;
+  z-index: 1;
+}
+.home-image .circle-extra {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 2px dashed #ff00ff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 16s linear infinite;
+  z-index: 1;
+}

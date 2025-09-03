@@ -1,65 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>María Vidigal Barroso</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Barra de navegación fija -->
-    <nav>
-        <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Acerca de</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María Vidigal Barroso</title>
+    <link rel="icon" type="image/png" href="assets/img/logoFondo.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-black text-white" >
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-black bg-opacity-75">
+        <div class="container-fluid d-flex align-items-center justify-content-between px-4">
+            <a class="navbar-brand text-white fw-bold ms-0" href="#home"><img src="assets/img/logoSinFondoP.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto gap-3">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about">Acerca de</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#skills">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+        <a href="assets/cv/CV María Vidigal.pdf" target="_blank" class="btn btn-outline-light d-flex align-items-center gap-2 me-0">Currículum <img src="assets/img/download.svg" alt="Descargar CV" class="download-icon"></a>
+    </div>
     </nav>
-
-    <!-- Secciones -->
-    <section id="home" class="hero-section">
-        <h1>Bienvenida a mi portfolio</h1>
-        <p>Soy María, desarrolladora web.</p>
-    </section>
-
-    <section id="about" class="hero-section">
-        <div class="hero-title">
-            <h2 class="main-text">Acerca De Mí</h2>
-            <h2 class="bg-text">ACERCA DE MÍ</h2>
+        <!-- Sección Home -->
+        <section id="home" class="home-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+            <div class="col-lg-6">
+                <p>Hola, mi nombre es,</p>
+                <h1><span class="highlight">María.</span></h1>
+                <p class="subtitle">Soy desarrolladora web FullStack.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                <a href="https://github.com/mariavib25" target="_blank"><img src="assets/img/iconoGit.png" alt="Git" class="icon-img"></a>
+                <a href="https://www.linkedin.com/in/maria-vidigal-barroso-532728357" target="_blank"><img src="assets/img/iconoLinkedin.png" alt="Linkedin" class="icon-img"></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="home-image position-relative">
+                    <img src="assets/img/home.png" alt="Foto de María" class="img-fluid rounded-circle">
+                    <span class="circle-extra"></span>
+                </div>
+            </div>
+            </div>
         </div>
-        <div class="line-decor"></div>
+        </section>
+        <!-- About -->
+        <section id="about" class="hero-section text-center">
+        <div class="hero-title position-relative text-center">
+            <h2 class="bg-text position-absolute w-100">ACERCA DE MÍ</h2>
+            <h2 class="main-text position-relative">Acerca De Mí</h2>
+        </div>
+        <div class="line-decor mx-auto"></div>
         <p class="subtitle">MÁS SOBRE MÍ</p>
-    </section>
-
-
-    <section id="skills" class="hero-section">
-        <div class="hero-title">
-            <h2 class="main-text">Habilidades</h2>
-            <h2 class="bg-text">HABILIDADES</h2>
+        <div class="container">
+            <p>
+                ¡Hola!👋🏻 <br><br> Soy María Vidigal, desarrolladora web full stack, tengo un gran entusiasmo por seguir aprendiendo y crecer 
+                profesionalmente en el mundo digital.<br><br> Me gusta afrontar nuevos retos y trabajar en equipo, aportando ideas creativas y 
+                resolviendo problemas con responsabilidad y dedicación. Durante mi formación he participado en distintos proyectos que me han 
+                permitido mejorar mis competencias técnicas y reforzar mi capacidad para adaptarme a diferentes entornos.<br><br> 
+                Me considero una persona comprometida, proactiva y con muchas ganas de crecer profesionalmente, siempre dispuesta a dar 
+                lo mejor de mí en cada proyecto.<br> </p>
         </div>
-        <div class="line-decor"></div>
-    </section>
-
-    <section id="projects" class="hero-section">
-        <div class="hero-title">
-            <h2 class="main-text">Proyectos</h2>
-            <h2 class="bg-text">PROYECTOS</h2>
-        </div>
-        <div class="line-decor"></div>
-    </section>
-
-    <section id="contact" class="hero-section">
-        <div class="hero-title">
-            <h2 class="main-text">Contacto</h2>
-            <h2 class="bg-text">CONTACTO</h2>
-        </div>
-        <div class="line-decor"></div>
-        <P>HSAUIHDSABJCSABÑJ</P>
-        <p>njsdajcdnsjdsnc</p>
-    </section>
-    <script src="js/script.js"></script>
-</body>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="hero-section text-center">
+            <div class="hero-title position-relative text-center">
+                <h2 class="bg-text position-absolute w-100">Habilidades</h2>
+                <h2 class="main-text position-relative">Habilidades</h2>
+            </div>
+            <div class="line-decor mx-auto"></div>
+            
+            <div class="container mt-5">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/html.png" alt="HTML" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">HTML</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/css.png" alt="CSS" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">CSS</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/js.png" alt="JavaScript" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">JavaScript</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/Bootstrap.png" alt="Bootstrap" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Bootstrap</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/php.png" alt="php" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">php</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/MySql.png" alt="MySql" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">MySql</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/C_Logo.png" alt="C" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">C</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/Wordpress.png" alt="Wordpress" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Wordpress</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/iconoGit.png" alt="GitHub" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">GitHub</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/eclipse.png" alt="Eclipse" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Eclipse</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/drawio.png" alt="Draw.io" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Draw.io</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/figma.png" alt="Figma" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Figma</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/trae.jpg" alt="Trae" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Trae</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/vsCode.png" alt="vsCode" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">vsCode</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects" class="hero-section text-center">
+            <div class="hero-title position-relative text-center">
+                <h2 class="bg-text position-absolute w-100">Proyectos</h2>
+                <h2 class="main-text position-relative">Proyectos</h2>
+            </div>
+            <div class="line-decor mx-auto"></div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="hero-section text-center">
+            <div class="hero-title position-relative text-center">
+                <h2 class="bg-text position-absolute w-100">Contacto</h2>
+                <h2 class="main-text position-relative">Contacto</h2>
+            </div>
+        <div class="line-decor mx-auto"></div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

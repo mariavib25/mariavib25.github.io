@@ -1,0 +1,51 @@
+/* ==== CURSOR PERSONALIZADO ==== */
+:root {
+  --cursor-size: 10px;
+  --ring-size: 36px;
+  --cursor-color: #fff; 
+  --ring-color: rgba(255, 255, 255, 0.25);
+}
+
+body { cursor: none; }
+
+/* Punto central */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  margin-top: calc(var(--cursor-size) * -0.5);
+  margin-left: calc(var(--cursor-size) * -0.5);
+  border-radius: 50%;
+  background: var(--cursor-color);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease;
+  mix-blend-mode: difference;
+}
+
+/* Aro exterior */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--ring-size);
+  height: var(--ring-size);
+  margin-top: calc(var(--ring-size) * -0.5);
+  margin-left: calc(var(--ring-size) * -0.5);
+  border-radius: 50%;
+  border: 2px solid var(--ring-color);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* Hover en links y botones */
+.cursor--hover {
+  transform: scale(0.8);
+}
+.cursor-ring--hover {
+  transform: scale(1.6);
+  border-color: rgba(255, 255, 255, 0.45);
+}*/

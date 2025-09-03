@@ -1,0 +1,118 @@
+/* =========================
+   SECCIONES GENERALES
+   ========================= */
+.hero-section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+/* Contenedor de títulos */
+.hero-title {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Texto de fondo gigante */
+.bg-text {
+  position: absolute;
+  top: 50%;              /* centrado vertical */
+  left: 50%;             /* centrado horizontal */
+  transform: translate(-50%, -50%);
+  font-size: 5vw;        /* se adapta al tamaño de pantalla */
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Texto principal delante del bg-text */
+.main-text {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0; /* eliminar márgenes por defecto */
+}
+
+/* Subtítulo debajo del título */
+.subtitle {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #ccc;
+  margin-top: 2rem;
+}
+
+/* Línea decorativa */
+.line-decor {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+  margin: 2rem auto;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1200px) {
+  .main-text {
+    font-size: 2.5rem;
+  }
+  .bg-text {
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 2rem;
+  }
+  .bg-text {
+    font-size: 12vw;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-text {
+    font-size: 1.5rem;
+  }
+  .bg-text {
+    font-size: 14vw;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card img {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}

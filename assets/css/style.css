@@ -1,0 +1,63 @@
+/* Fuente base */
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  backdrop-filter: blur(2px);
+}
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ff00ff;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Botón CV */
+.btn-outline-light {
+  border: 2px solid #ff00ff !important;
+  transition: all 0.3s ease;
+}
+.btn-outline-light:hover {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: #000 !important;
+  font-weight: bold;
+}
+.download-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.btn-outline-light:hover .download-icon {
+  transform: translateY(2px);
+  filter: brightness(0) invert(1);
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+.icon-img:hover {
+  transform: scale(1.1);
+}
+
