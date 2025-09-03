@@ -1,6 +1,4 @@
-/* =========================
-   HOME
-   ========================= */
+/* HOME */
 .home-section {
   font-size: 1.8rem;
   min-height: 100vh;
@@ -9,7 +7,6 @@
   padding: 4rem 0;
 }
 
-/* Nombre destacado con degradado animado */
 .highlight {
   background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
   background-size: 200% auto;
@@ -24,7 +21,7 @@
   100% { background-position: 200% center; }
 }
 
-/* Imagen y círculos animados */
+/* Imagen y círculos */
 .home-image img {
   width: 250px;
   height: 250px;
@@ -35,6 +32,7 @@
   position: relative;
   z-index: 4;
 }
+
 .home-image::before {
   content: "";
   position: absolute;
@@ -48,6 +46,7 @@
   animation: spin 8s linear infinite;
   z-index: 1;
 }
+
 .home-image::after {
   content: "";
   position: absolute;
@@ -61,6 +60,7 @@
   animation: spin-reverse 12s linear infinite;
   z-index: 1;
 }
+
 .home-image .circle-extra {
   position: absolute;
   width: 420px;
@@ -73,3 +73,61 @@
   animation: spin 16s linear infinite;
   z-index: 1;
 }
+
+/* Para pantallas medianas */
+@media (max-width: 992px) {
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .home-image {
+    margin-top: 3rem; /* Aumentado de 2rem a 3rem */
+  }
+
+  .home-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-image::before,
+  .home-image::after,
+  .home-image .circle-extra {
+    width: 240px;
+    height: 240px;
+  }
+
+  .highlight {
+    font-size: 5rem;
+  }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 576px) {
+  .home-section {
+    padding: 2rem 1rem;
+  }
+
+  .home-image {
+    margin-top: 2.5rem; /* Aumentado de 2rem a 2.5rem */
+  }
+
+  .home-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-image::before,
+  .home-image::after,
+  .home-image .circle-extra {
+    width: 180px;
+    height: 180px;
+  }
+
+  .highlight {
+    font-size: 3rem;
+  }
+}
+
+

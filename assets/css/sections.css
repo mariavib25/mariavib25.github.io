@@ -44,7 +44,7 @@
   background: linear-gradient(90deg, #ff00ff, #00ffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0; /* eliminar márgenes por defecto */
+  margin: 0; 
 }
 
 /* Subtítulo debajo del título */
@@ -63,9 +63,46 @@
   margin: 2rem auto;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+.project-item {
+  position: relative;
+}
+
+.project-img {
+  background: linear-gradient(180deg, #ff00ff33, #00ffff33);
+  padding: 10px;
+}
+
+.project-img img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.project-img img:hover {
+  transform: scale(1.05);
+}
+
+.text-primary {
+  color: #ff00ff !important;
+}
+
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card img {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+/* RESPONSIVE */
 @media (max-width: 1200px) {
   .main-text {
     font-size: 2.5rem;
@@ -97,22 +134,4 @@
   .subtitle {
     font-size: 0.8rem;
   }
-}
-
-.skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.skill-card img {
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover img {
-    transform: scale(1.1);
 }

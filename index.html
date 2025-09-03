@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="assets/img/logoFondo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/home.css">
@@ -28,7 +30,6 @@
                 <li class="nav-item"><a class="nav-link text-white" href="#about">Acerca de</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#skills">Habilidades</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#projects">Proyectos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contacto</a></li>
             </ul>
         </div>
         <a href="assets/cv/CV María Vidigal.pdf" target="_blank" class="btn btn-outline-light d-flex align-items-center gap-2 me-0">Currículum <img src="assets/img/download.svg" alt="Descargar CV" class="download-icon"></a>
@@ -43,8 +44,9 @@
                 <h1><span class="highlight">María.</span></h1>
                 <p class="subtitle">Soy desarrolladora web FullStack.</p>
                 <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                <a href="https://github.com/mariavib25" target="_blank"><img src="assets/img/iconoGit.png" alt="Git" class="icon-img"></a>
-                <a href="https://www.linkedin.com/in/maria-vidigal-barroso-532728357" target="_blank"><img src="assets/img/iconoLinkedin.png" alt="Linkedin" class="icon-img"></a>
+                    <a href="https://github.com/mariavib25" target="_blank"><img src="assets/img/iconoGit.png" alt="Git" class="icon-img"></a>
+                    <a href="https://www.linkedin.com/in/maria-vidigal-barroso-532728357" target="_blank"><img src="assets/img/iconoLinkedin.png" alt="Linkedin" class="icon-img"></a>
+                    <a href="#" class="btn btn-outline-light d-flex align-items-center gap-2 me-0" id="copyEmailBtn"><i class="bi bi-clipboard"></i> mvb.mvidigal@gmail.com</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center">
@@ -104,6 +106,12 @@
                     </div>
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/typescript.png" alt="Typescript" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Typescript</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
                             <img src="assets/img/Bootstrap.png" alt="Bootstrap" class="img-fluid mb-2" style="height: 50px;">
                             <h5 class="mb-0">Bootstrap</h5>
                         </div>
@@ -112,6 +120,12 @@
                         <div class="skill-card p-3 rounded-3 bg-dark">
                             <img src="assets/img/php.png" alt="php" class="img-fluid mb-2" style="height: 50px;">
                             <h5 class="mb-0">php</h5>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="skill-card p-3 rounded-3 bg-dark">
+                            <img src="assets/img/laravel.png" alt="Laravel" class="img-fluid mb-2" style="height: 50px;">
+                            <h5 class="mb-0">Laravel</h5>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 col-lg-2">
@@ -178,14 +192,37 @@
                 <h2 class="main-text position-relative">Proyectos</h2>
             </div>
             <div class="line-decor mx-auto"></div>
-        </section>
-        <!-- Contact -->
-        <section id="contact" class="hero-section text-center">
-            <div class="hero-title position-relative text-center">
-                <h2 class="bg-text position-absolute w-100">Contacto</h2>
-                <h2 class="main-text position-relative">Contacto</h2>
+            <div class="container">
+                <div class="row mb-5 project-item align-items-start mt-5">
+                    <!-- Imagen -->
+                    <div class="col-lg-6 mb-3 mb-lg-0 d-flex justify-content-lg-start justify-content-center">
+                        <div class="project-img rounded overflow-hidden shadow">
+                            <a href="https://12.proyectos.esvirgua.com/admin/" target="_blank">
+                                <img src="assets/img/proyectoAulaMatinal.png" alt="Proyecto Aula Matinal" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Texto -->
+                    <div class="col-lg-6 text-lg-start text-center">
+                        <h5 class="text-primary mb-2">Aula Matinal</h5>
+                        <p class="text-muted mb-2">Proyecto de equipo</p>
+                        <p class="mb-3">Una plataforma para gestionar el control del aula matinal de la Escuela Virgen de Guadalupe (Badajoz).</p>
+                        <ul class="list-unstyled mb-3">
+                            <li><i class="bi bi-check2 text-primary me-2"></i>Gestión de inscripciones de alumnos</li>
+                            <li><i class="bi bi-check2 text-primary me-2"></i>Control de remesas y facturación</li>
+                            <li><i class="bi bi-check2 text-primary me-2"></i>Configuración y ajuste de tarifas</li>
+                            <li><i class="bi bi-check2 text-primary me-2"></i>Calendario académico y días no lectivos</li>
+                            <li><i class="bi bi-check2 text-primary me-2"></i>Interfaz personalizada con acceso individualizado</li>
+                        </ul>
+                        <div class="d-flex gap-2 justify-content-lg-start justify-content-center">
+                            <img src="assets/img/PHP.png" alt="" class="img-fluid" style="height: 30px;">
+                            <img src="assets/img/HTML.png" alt="" class="img-fluid" style="height: 30px;">
+                            <img src="assets/img/Bootstrap.png" alt="" class="img-fluid" style="height: 30px;">
+                        </div>
+                    </div>
+                </div>
             </div>
-        <div class="line-decor mx-auto"></div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/script.js"></script>

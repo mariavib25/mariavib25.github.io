@@ -1,7 +1,4 @@
-
-/* =========================
-   ABOUT (animación entrada)
-   ========================= */
+/* ABOUT  */
 #about {
   opacity: 0;
   transform: translateY(50px);
@@ -24,9 +21,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/*  RESPONSIVE */
 @media (max-width: 900px) {
   .highlight { font-size: 4rem; }
   #about p { font-size: 1rem; text-align: center; }
