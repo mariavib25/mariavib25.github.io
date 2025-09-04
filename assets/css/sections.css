@@ -15,16 +15,18 @@
 .hero-title {
   position: relative;
   display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
+  justify-content: center; 
+  align-items: center;     
 }
 
 /* Texto de fondo gigante */
 .bg-text {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* solo centrado vertical */
-  font-size: 3vw;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centrado vertical y horizontal */
+  width: max-content;
+  font-size: 2.8vw;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.05);
   z-index: 1;
