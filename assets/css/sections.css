@@ -131,6 +131,16 @@
   .subtitle {
     font-size: 0.9rem;
   }
+  .project-img {
+        padding: 5px; 
+        height: auto; 
+    }
+
+    .project-img img {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; 
+    }
 }
 
 @media (max-width: 480px) {
